@@ -1,14 +1,17 @@
-# DualNet
-Software Engineering Projekt
+# DualNet(Software Engeneering Project)
+A social Media plattform for all DHBW students.
 
-# Projekt Gruppe:
-Ali, Max, Sebo, Johannes 
+# Project Team:
+- Ali
+- Max
+- Sebo
+- Johannes 
 
-# planning
-- Wednesday:  reviewing made Features for umcomming Sprint
-- Thursday:   make Features Tasks, do Tasks
+# Planning
+- Wednesday:  reviewing made Features for upcoming Sprint and reviewing other Groups progress
+- Thursday:   make Features into Tasks, do Tasks
 - Friday:     do Tasks
 - Saturday:   do Tasks
 - Sunnday:    do Tasks
 - Monday:     do Tasks and resolve last Issues to Sprint
-- Tuesday:    define new upcomming Sprint and associated Features
+- Tuesday:    define new upcoming Sprint and associated Features & Create our Blog
