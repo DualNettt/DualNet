@@ -1,17 +1,18 @@
 # DualNet(Software Engeneering Project)
-A social Media plattform for all DHBW students.
+Eine Social Media Plattform für alle DHBW Studenten.
 
-# Project Team:
+# Projekt Team:
 - Ali
 - Max
 - Sebo
 - Johannes 
 
-# Planning
-- Wednesday:  reviewing made Features for upcoming Sprint & reviewing other Groups progress
-- Thursday:   make Features into Tasks & assigne Tasks to Members & do Tasks 
-- Friday:     do Tasks
-- Saturday:   do Tasks
-- Sunnday:    do Tasks
-- Monday:     do Tasks and resolve last Issues to Sprint
-- Tuesday:    define new upcoming Sprint & Create our Blog
+# Planung 
+- Mittwoch:    Retroperspektive von erstellten Features für kommende Sprints & Überarbeitung von Blogs anderer Gruppen
+- Donnerstag:  Features in Aufgaben umwandeln & dem Team zuordnen -> Zugewiesene Aufgaben ausführen
+- Freitag:     Aufgaben ausführen
+- Samstag:     Aufgaben ausführen
+- Sonntag:     Aufgaben ausführen
+- Montag:      Aufgaben ausführen und aufkommende Probleme in die Sprints aufnehmen
+- Dienstag:    Neuen herauffolgenden Sprint definieren und Blog kreieren
+
