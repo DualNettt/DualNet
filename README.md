@@ -4,7 +4,7 @@ Eine Social Media Plattform für alle DHBW Studenten.
 # Projekt Team:
 - Ali
 - Max
-- Sebo
+- Sebastiano
 - Johannes 
 
 # Planung 
