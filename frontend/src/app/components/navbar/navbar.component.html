@@ -3,12 +3,12 @@
     <div class="navbar-brand">
       <span class="brand-text">DualNet</span>
     </div>
-    
+
     <ul class="navbar-nav">
       <li class="nav-item" *ngFor="let item of navItems">
-        <a 
-          class="nav-link" 
-          [routerLink]="item.route" 
+        <a
+          class="nav-link"
+          [routerLink]="item.route"
           routerLinkActive="active"
           (click)="onNavClick(item.label)"
           [class.active]="activeItem === item.label"
@@ -18,12 +18,13 @@
         </a>
       </li>
     </ul>
-    
+
     <div class="navbar-actions">
-      <button class="login-btn" (click)="onLogin()">
+      <!-- Only show Login in the navbar; register is reachable from the login page -->
+      <a class="login-btn" routerLink="/login" routerLinkActive="active">
         <span class="login-icon">👤</span>
         <span class="login-text">Login</span>
-      </button>
+      </a>
     </div>
   </div>
 </nav>
