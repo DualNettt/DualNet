@@ -22,4 +22,10 @@ export class NavbarComponent {
   onNavClick(item: string) {
     this.activeItem = item;
   }
+
+  onLogin() {
+    // Placeholder for login functionality
+    console.log('Login button clicked!');
+    alert('Login functionality will be implemented here.');
+  }
 }
