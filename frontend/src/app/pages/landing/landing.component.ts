@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class LandingComponent {
   constructor(private router: Router) {}
 
-  // Features data ali ud max sebo
+
   features = [
     {
       icon: '📸',
