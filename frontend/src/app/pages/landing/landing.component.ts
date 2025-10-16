@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class LandingComponent {
   constructor(private router: Router) {}
 
-  // Features data
+  // Features   data
   features = [
     {
       icon: '📸',
@@ -39,7 +39,7 @@ export class LandingComponent {
   // Trust indicators
   trustIndicators = [
     '🏢 Partnerhochschulen',
-    '🏭 Partnerunternehmen', 
+    '🏭 Partnerunternehmen',
     '🎓 Studentenwerke',
     '📊 Datenschutz'
   ];
