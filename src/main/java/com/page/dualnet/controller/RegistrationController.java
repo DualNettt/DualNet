@@ -36,12 +36,23 @@ public class RegistrationController {
 
         if (!p.equals(pc)) {
             redirectAttributes.addAttribute("error", "mismatch");
-            return "redirect:/register.html";
+            return "redirect:/registration.html";
+        }
+
+        if (p.isBlank()) {
+            redirectAttributes.addAttribute("error", "missing_password");
+            return "redirect:/registration.html";
+        }
+
+        // check if account with same username or email already exists
+        if (accountService.existsByUsernameOrEmail(username.trim(), email.trim())) {
+            redirectAttributes.addAttribute("error", "exists");
+            return "redirect:/registration.html";
         }
 
         Account account = new Account(username.trim(), email.trim(), p);
         accountService.save(account);
         // on success, redirect to a welcome page
-        return "redirect:/Homepage.html";
+        return "redirect:/login.html";
     }
 }
