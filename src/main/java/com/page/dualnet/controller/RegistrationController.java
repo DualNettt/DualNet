@@ -1,0 +1,47 @@
+package com.page.dualnet.controller;
+
+import com.page.dualnet.model.Account;
+import com.page.dualnet.service.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+@Controller
+public class RegistrationController {
+
+    private final AccountService accountService;
+
+    @Autowired
+    public RegistrationController(AccountService accountService) {
+        this.accountService = accountService;
+    }
+
+    @PostMapping("/register")
+    public String register(
+            @RequestParam String username,
+            @RequestParam String email,
+            @RequestParam(required = false) String password,
+            @RequestParam(required = false, name = "passwordConfirm") String passwordConfirm,
+            RedirectAttributes redirectAttributes
+    ) {
+        if (username == null || username.isBlank() || email == null || email.isBlank()) {
+            redirectAttributes.addAttribute("error", "missing");
+            return "redirect:/registration.html";
+        }
+
+        String p = password == null ? "" : password;
+        String pc = passwordConfirm == null ? "" : passwordConfirm;
+
+        if (!p.equals(pc)) {
+            redirectAttributes.addAttribute("error", "mismatch");
+            return "redirect:/register.html";
+        }
+
+        Account account = new Account(username.trim(), email.trim(), p);
+        accountService.save(account);
+        // on success, redirect to a welcome page
+        return "redirect:/Homepage.html";
+    }
+}
