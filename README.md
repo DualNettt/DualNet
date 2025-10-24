@@ -15,5 +15,5 @@
    ##### Montag:      Aufgaben ausführen und aufkommende Probleme lösen oder in die nächsten Sprints aufnehmen
    ##### Dienstag:    Nächster Sprint mit Features definieren und Blog erstellen
 
-### Projektspezifische Informationen
-   #####
+## Projektspezifische Informationen
+   
