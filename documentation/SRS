@@ -1,0 +1,100 @@
+D. Softwareanforderungen – DualNet
+
+1. Einleitung
+
+1.1 Übersicht
+
+DualNet ist eine Social‑Media‑Plattform, die primär für Studierende der DHBW konzipiert ist. Verkaufsargumente / Alleinstellungsmerkmale:
+
+Fokus auf Studierende (Campus-spezifische Gruppen und Veranstaltungen sind geplant).
+Einfache, datenschutzorientierte Grundstruktur mit späterer Datenbankanbindung.
+Intuitive Benutzeroberfläche (Login/Register, Beiträge, Nachrichten).
+1.2 Geltungsbereich
+
+Dieses Dokument beschreibt die Softwareanforderungen für das DualNet‑System auf einer funktionalen und nicht‑funktionalen Ebene. Es deckt die Kernfunktionen einer Social‑Media‑Plattform ab (Authentifizierung, Nutzerprofile, Beiträge, Interaktionen, Messaging) und enthält Hinweise zu Erweiterungen (z. B. Datenbankanbindung, Moderation). Detailimplementierungen (z. B. Datenbankschema, Deployment‑Skripte) werden in separaten technischen Dokumenten spezifiziert.
+
+1.3 Definitionen, Akronyme und Abkürzungen
+
+DHBW – Duale Hochschule Baden-Württemberg
+UI – User Interface (Benutzeroberfläche)
+Auth – Authentifizierung
+DB – Datenbank
+1.4 Referenzen
+
+RUP‑basierte Vorlagen (intern)
+Projekt-Repository (Git) – Hauptbranch (Hinweis: Repository wurde in WebStorm in die IDE gepullt)
+2. Funktionale Anforderungen
+
+2.1 Übersicht
+
+DualNet stellt grundlegende Social‑Media‑Funktionen bereit: Registrierung & Login, Profilverwaltung, Beitragsverwaltung (erstellen, liken, kommentieren), Suchen von Nutzern, private Nachrichten und Freundschaften/Verbindungen. Untenstehend ist ein Anwendungsfalldiagramm, das die wichtigsten Use Cases visualisiert.
+
+Anwendungsfalldiagramm (Download):
+
+
+2.2 Authentifizierung (Registrieren / Anmelden)
+
+Relevante User Stories:
+
+Registrierung mit username, email, password, passwordConfirm.
+Login möglich mit E‑Mail oder Username plus Passwort.
+Aufsetzten der DB
+Voraussetzungen:
+
+Nutzer hat Zugriff auf Registrierungsseite.
+(Vorübergehend) Platzhalter-Backend bzw. lokale Auth‑Logik; DB‑Anbindung ist später vorgesehen.
+Nachbedingungen:
+
+Bei erfolgreicher Registrierung: Nutzerkonto im System (derzeit in-memory / mock), Weiterleitung zur Profilseite.
+Bei erfolgreichem Login: Authentifizierte Session (JWT oder Session‑Cookie, später zu definieren).
+Geschätzter Aufwand: Hoch
+
+2.3 Profilverwaltung
+
+Funktion: Nutzer können persönliche Daten anzeigen und bearbeiten (Anzeige‑Name, Bio, Profilbild).
+Voraussetzungen: Authentifizierte Session.
+Nachbedingungen: Profilinformationen aktualisiert und für andere sichtbar (mit späterer Persistenz in einer DB).
+Aufwand: Niedrig–Mittel
+
+2.4 Beiträge erstellen / Interaktionen
+
+Funktionen: Beitrag erstellen (Text, ggf. Bild), Beiträge liken, kommentieren.
+Voraussetzungen: Authentifizierung.
+Nachbedingungen: Beitrag sichtbar im Feed, Interaktionen aktualisiert.
+Aufwand: Mittel
+
+2.5 Suche & Verbindungen
+
+Funktionen: Nutzer suchen, Freundschaftsanfragen oder Verbindungen senden/akzeptieren.
+Voraussetzungen: Nutzerkonto vorhanden.
+Nachbedingungen: Verbindungsstatus aktualisiert.
+Aufwand: Niedrig–Mittel
+
+2.6 Nachrichten (Privatnachrichten)
+
+Funktion: Direkte Nachrichten zwischen Nutzern versenden.
+Voraussetzungen: Beide Nutzer existieren; Sender ist authentifiziert.
+Nachbedingungen: Nachricht gespeichert (später persistent) und Empfänger wird benachrichtigt.
+Aufwand: Mittel
+
+2.7 Moderation / Administration
+
+Funktionen (Admin): Nutzer verwalten (suspendieren/löschen), Beiträge moderieren (löschen, markieren).
+Voraussetzungen: Adminrolle vorhanden.
+Nachbedingungen: Inhalte/Nutzerstatus angepasst.
+Aufwand: Niedrig–Mittel
+
+3. Nicht‑funktionale Anforderungen
+
+Benutzerfreundlichkeit: Intuitives, responsives UI; klare Fehlermeldungen bei Eingabefehlern.
+Zuverlässigkeit: Authentifizierungsflüsse sollen konsistent arbeiten; Fehlertoleranz bei Ausfall externer Dienste.
+Leistung: Seitenladezeit unter normalen Lasten < 2s (Ziel).
+Sicherheit: Sichere Passwortspeicherung (BCrypt/salted hashing), Eingabevalidierung, Schutz vor XSS/CSRF.
+Wartbarkeit: Modularer Code, gut dokumentierte Komponenten, Tests für kritische Pfade (Auth, Posting).
+Flexibilität: Architektur so gestaltet, dass eine Datenbankanbindung später leicht ergänzt werden kann (z. B. Repository‑Pattern, Interfaces).
+4. Technische Einschränkungen / Annahmen
+
+Entwicklungsumgebung: WebStorm (Projekt wurde in die IDE gepullt).
+Vorübergehendes Fehlen einer persistenten Datenbank — die Implementierung ist so vorbereitet, dass eine DB‑Anbindung später ergänzt werden kann.
+Sprache/Stack: Frontend (z. B. React/Vue) und Backend (z. B. Node.js/Express) sind vorgesehen;
+Datenschutz: Es gelten die üblichen Hochschul-/DSGVO‑Anforderungen — genaue Regeln werden später definiert
