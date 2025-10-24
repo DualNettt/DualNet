@@ -16,6 +16,15 @@
   </style>
 </head>
 <body>
+  <div id="nav-placeholder"></div>
+  <script>
+    (function(){
+      fetch('/navbar.html')
+        .then(r => r.ok ? r.text() : '')
+        .then(html => { const ph = document.getElementById('nav-placeholder'); if (ph) ph.innerHTML = html; })
+        .catch(() => {});
+    })();
+  </script>
   <div class="container">
     <h1>Willkommen bei DualNet</h1>
     <p>Das ist eine ganz einfache statische Webseite. Du kannst diese Datei bearbeiten unter <code>src/main/resources/static/index.html</code>.</p>

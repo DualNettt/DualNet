@@ -26,6 +26,15 @@
   </style>
 </head>
 <body>
+  <div id="nav-placeholder"></div>
+  <script>
+    (function(){
+      fetch('/navbar.html')
+        .then(r => r.ok ? r.text() : '')
+        .then(html => { const ph = document.getElementById('nav-placeholder'); if (ph) ph.innerHTML = html; })
+        .catch(() => {});
+    })();
+  </script>
   <h1>Registrierung</h1>
   <div id="message" style="display:none" class="msg">Registrierung erfolgreich!</div>
   <div id="error" style="display:none" class="err"></div>
