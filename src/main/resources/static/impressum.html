@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Impressum - DualNet</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/Icons/favicon.png">
+  <link rel="shortcut icon" href="/Icons/favicon.png" type="image/png">
+  <meta name="theme-color" content="#0b62d6">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #222;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: white;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #667eea;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+    h2 {
+      color: #667eea;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    p, li {
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 32px;
+      color: white;
+      background: rgba(0,0,0,0.2);
+      margin-top: 40px;
+    }
+    .footer-links {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    (function(){
+      fetch('/navbar.html')
+        .then(r => r.ok ? r.text() : '')
+        .then(html => { const ph = document.getElementById('nav-placeholder'); if (ph) ph.innerHTML = html; })
+        .catch(() => {});
+    })();
+  </script>
+
+  <div class="container">
+    <h1>Impressum</h1>
+
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <p>
+      DualNet<br>
+      [Ihre Adresse]<br>
+      [Postleitzahl Ort]<br>
+      Deutschland
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+      Telefon: [Ihre Telefonnummer]<br>
+      E-Mail: <a href="mailto:info@dualnet.de">info@dualnet.de</a>
+    </p>
+
+    <h2>Vertreter</h2>
+    <p>
+      Vertreten durch:<br>
+      [Name des Gründers/Vertreters]
+    </p>
+
+    <h2>Registereintrag</h2>
+    <p>
+      Eintragung im Handelsregister.<br>
+      Registergericht: [Registergericht]<br>
+      Registernummer: [Registernummer]
+    </p>
+
+    <h2>Umsatzsteuer-ID</h2>
+    <p>
+      Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:<br>
+      [Ihre USt-ID]
+    </p>
+
+    <h2>Responsible for editorial</h2>
+    <p>
+      [Name]<br>
+      [Adresse]
+    </p>
+
+    <h2>Haftungsausschluss</h2>
+    <h3>Haftung für Inhalte</h3>
+    <p>
+      Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 des TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen bleiben hiervon unberührt.
+    </p>
+
+    <h3>Haftung für Links</h3>
+    <p>
+      Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+    </p>
+
+    <h3>Urheberrecht</h3>
+    <p>
+      Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des Autors oder Schöpfers.
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 DualNet - Die Community für duale Studenten</p>
+    <div class="footer-links">
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+      <a href="/agb.html">AGB</a>
+    </div>
+  </footer>
+</body>
+</html>

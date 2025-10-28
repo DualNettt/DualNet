@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AGB - DualNet</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/Icons/favicon.png">
+  <link rel="shortcut icon" href="/Icons/favicon.png" type="image/png">
+  <meta name="theme-color" content="#0b62d6">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #222;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: white;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #667eea;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+    h2 {
+      color: #667eea;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+    }
+    h3 {
+      color: #555;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    p, li {
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 32px;
+      color: white;
+      background: rgba(0,0,0,0.2);
+      margin-top: 40px;
+    }
+    .footer-links {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    (function(){
+      fetch('/navbar.html')
+        .then(r => r.ok ? r.text() : '')
+        .then(html => { const ph = document.getElementById('nav-placeholder'); if (ph) ph.innerHTML = html; })
+        .catch(() => {});
+    })();
+  </script>
+
+  <div class="container">
+    <h1>Allgemeine Geschäftsbedingungen (AGB)</h1>
+
+    <h2>1. Geltungsbereich</h2>
+    <p>
+      Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für die Nutzung der Website und der Dienste von DualNet. Mit der Nutzung dieser Website akzeptieren Sie diese AGB vollständig und bedingungslos.
+    </p>
+
+    <h2>2. Nutzungsbedingungen</h2>
+
+    <h3>2.1 Bestimmungen zum Inhalt</h3>
+    <p>
+      Der Nutzer erklärt sich damit einverstanden, dass er:
+    </p>
+    <ul>
+      <li>die Website nicht für rechtswidrige oder unerlaubte Zwecke benutzen wird</li>
+      <li>keine Inhalte postieren wird, die beleidigend, diffamierend oder diskriminierend sind</li>
+      <li>keine Inhalte hochlädt, die Malware, Viren oder schädliche Code enthalten</li>
+      <li>keine Inhalte verbreitet, die gegen Urheberrechte oder andere Schutzrechte verstoßen</li>
+      <li>andere Nutzer nicht belästigen oder bedrohen wird</li>
+    </ul>
+
+    <h3>2.2 Verbot von automatisierten Zugriffen</h3>
+    <p>
+      Es ist nicht gestattet, automatisierte Systeme oder Software zu verwenden, um auf diese Website zuzugreifen oder deren Inhalte zu kopieren, es sei denn, dies wird ausdrücklich von uns genehmigt.
+    </p>
+
+    <h3>2.3 Passwort und Kontosicherheit</h3>
+    <p>
+      Der Nutzer ist verantwortlich für die Geheimhaltung seines Passworts und für alle Aktivitäten, die unter seinem Konto stattfinden. Der Nutzer erklärt sich damit einverstanden, sein Passwort zu schützen und es niemandem mitzuteilen.
+    </p>
+
+    <h2>3. Beschränkung der Haftung</h2>
+
+    <p>
+      DualNet haftet nicht für:
+    </p>
+    <ul>
+      <li>Verluste oder Schäden, die sich aus der Nutzung oder Unfähigkeit zur Nutzung dieser Website ergeben</li>
+      <li>Fehler oder Auslassungen in den Inhalten</li>
+      <li>Unterbrechungen oder Fehler im Service</li>
+      <li>Verlust von Daten</li>
+      <li>Schäden, die sich aus der Nutzung von Inhalten anderer Nutzer ergeben</li>
+    </ul>
+
+    <h2>4. Geistiges Eigentum</h2>
+
+    <h3>4.1 Inhalte von DualNet</h3>
+    <p>
+      Alle Inhalte dieser Website, einschließlich Text, Grafiken, Logos, Bilder und Software, sind Eigentum von DualNet oder von den jeweiligen Inhaltsanbietern und sind durch deutsche und internationale Urheberrechtsgesetze geschützt.
+    </p>
+
+    <h3>4.2 Benutzerinhalt</h3>
+    <p>
+      Mit dem Hochladen von Inhalten auf dieser Website gewährt der Nutzer DualNet eine nicht-exklusive, weltweite, lizenzgebührenfreie und unbefristete Lizenz zur Nutzung, Vervielfältigung, Änderung und Verteilung dieses Inhalts.
+    </p>
+
+    <h2>5. Externe Links</h2>
+
+    <p>
+      Diese Website kann Links zu externen Websites enthalten. DualNet ist nicht verantwortlich für die Inhalte, Genauigkeit oder Praktiken dieser Website. Die Verwendung externer Links bedeutet nicht, dass DualNet diese Website unterstützt oder billigt.
+    </p>
+
+    <h2>6. Änderung und Beendigung</h2>
+
+    <p>
+      DualNet behält sich das Recht vor:
+    </p>
+    <ul>
+      <li>diese Website und ihre Inhalte jederzeit zu ändern oder zu aktualisieren</li>
+      <li>den Service zeitweise oder dauerhaft einzustellen</li>
+      <li>die Nutzung der Website durch einen Benutzer zu sperren oder zu beenden, wenn dieser gegen diese AGB verstößt</li>
+    </ul>
+
+    <h2>7. Datenschutz</h2>
+
+    <p>
+      Ihre Nutzung dieser Website unterliegt unserer <a href="/datenschutz.html">Datenschutzerklärung</a>. Bitte lesen Sie diese sorgfältig durch.
+    </p>
+
+    <h2>8. Anwendbares Recht und Gerichtsstand</h2>
+
+    <p>
+      Diese AGB und die Nutzung dieser Website unterliegen den Gesetzen der Bundesrepublik Deutschland. Alle Streitigkeiten, die sich aus diesen AGB oder der Nutzung dieser Website ergeben, werden sich der ausschließlichen Gerichtsbarkeit der deutschen Gerichte unterwerfen.
+    </p>
+
+    <h2>9. Salvatorische Klausel</h2>
+
+    <p>
+      Sollte eine Bestimmung dieser AGB ungültig oder nicht durchsetzbar sein, hat dies keine Auswirkungen auf die Gültigkeit oder Durchsetzbarkeit der übrigen Bestimmungen. Diese ungültige Bestimmung wird durch eine gültige Bestimmung ersetzt, die dem Zweck der ursprünglichen Bestimmung so nahe wie möglich kommt.
+    </p>
+
+    <h2>10. Kontakt</h2>
+
+    <p>
+      Bei Fragen zu diesen AGB kontaktieren Sie uns unter:<br><br>
+      DualNet<br>
+      E-Mail: <a href="mailto:support@dualnet.de">support@dualnet.de</a>
+    </p>
+
+    <h2>11. Änderungen dieser AGB</h2>
+
+    <p>
+      DualNet behält sich das Recht vor, diese AGB jederzeit zu ändern. Der Nutzer wird über wesentliche Änderungen informiert. Die Nutzung der Website nach einer Änderung bedeutet die Akzeptanz der neuen AGB.
+    </p>
+
+    <p style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #999; font-size: 0.9rem;">
+      Letzter Update: Oktober 2025
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 DualNet - Die Community für duale Studenten</p>
+    <div class="footer-links">
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+      <a href="/agb.html">AGB</a>
+    </div>
+  </footer>
+</body>
+</html>

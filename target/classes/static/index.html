@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DualNet - Die Community für duale Studenten</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/Icons/favicon.png">
+  <link rel="shortcut icon" href="/Icons/favicon.png" type="image/png">
+  <meta name="theme-color" content="#0b62d6">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #222;
+      min-height: 100vh;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 32px;
+      opacity: 0.95;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 14px 32px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .btn-primary {
+      background: white;
+      color: #667eea;
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 2px solid white;
+    }
+    .features {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+    .feature-card {
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+    }
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+    .feature-card h3 {
+      color: #667eea;
+      margin-bottom: 12px;
+      font-size: 1.5rem;
+    }
+    .feature-card p {
+      color: #555;
+      line-height: 1.6;
+    }
+    .about {
+      max-width: 800px;
+      margin: 0 auto 60px;
+      padding: 40px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .about h2 {
+      color: #667eea;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    .about p {
+      color: #555;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 32px;
+      color: white;
+      background: rgba(0,0,0,0.2);
+    }
+    .footer-links {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script>
+    (function(){
+      fetch('/navbar.html')
+        .then(r => r.ok ? r.text() : '')
+        .then(html => { const ph = document.getElementById('nav-placeholder'); if (ph) ph.innerHTML = html; })
+        .catch(() => {});
+    })();
+  </script>
+
+  <section class="hero">
+    <h1>Willkommen bei DualNet</h1>
+    <p>Die Social-Media-Plattform für duale Studenten der DHBW</p>
+    <div class="cta-buttons">
+      <a href="/registration.html" class="btn btn-primary">Jetzt registrieren</a>
+      <a href="/login.html" class="btn btn-secondary">Anmelden</a>
+    </div>
+  </section>
+
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-icon">🎓</div>
+      <h3>Für Studenten</h3>
+      <p>Eine Plattform speziell für duale Studenten, um sich auszutauschen und zu vernetzen.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💬</div>
+      <h3>Austausch</h3>
+      <p>Teile deine Erfahrungen, stelle Fragen und lerne von anderen dualen Studenten.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🤝</div>
+      <h3>Vernetzen</h3>
+      <p>Knüpfe Kontakte zu Kommilitonen aus verschiedenen Studiengängen und Unternehmen.</p>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>Was ist DualNet?</h2>
+    <p>
+      DualNet ist eine Social-Media-Plattform, die speziell für duale Studenten entwickelt wurde.
+      Hier kannst du dich mit anderen Studierenden vernetzen, Erfahrungen austauschen und dein
+      Netzwerk aufbauen. Ähnlich wie Instagram, aber fokussiert auf die Bedürfnisse und Interessen
+      dualer Studenten der DHBW.
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 DualNet - Die Community für duale Studenten</p>
+    <div class="footer-links">
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+      <a href="/agb.html">AGB</a>
+    </div>
+  </footer>
+</body>
+</html>
