@@ -46,3 +46,4 @@ Schnellstart
 
 Weiteres
 - Diese README ist bewusst kompakt gehalten. Für tiefergehende Dokumentation (z. B. API, Sicherheitsverbesserungen, Tests) können weitere Sektionen ergänzt werden.
+
